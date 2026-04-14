@@ -1,0 +1,2 @@
+# No external packages needed — uses only Python built-ins
+# (http.server, sqlite3, json, uuid, threading, webbrowser)
