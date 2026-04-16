@@ -1,0 +1,93 @@
+{
+  "folders": [
+    {
+      "name": "🏥 Hospital Voice Agent",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "python",
+    "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.rulers": [88],
+    "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.formatOnSave": false,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.iconTheme": "vs-seti",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.minimap.enabled": true,
+    "explorer.confirmDelete": false
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "🏥 Run Hospital Voice Agent",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/app.py",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "env": {
+          "PORT": "8080"
+        }
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "🚀 Start Hospital Voice Agent",
+        "type": "shell",
+        "command": "python app.py",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "new",
+          "clear": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "🌐 Open in Browser",
+        "type": "shell",
+        "command": "start http://localhost:8080",
+        "windows": {
+          "command": "start http://localhost:8080"
+        },
+        "osx": {
+          "command": "open http://localhost:8080"
+        },
+        "linux": {
+          "command": "xdg-open http://localhost:8080"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "📊 Open Admin Dashboard",
+        "type": "shell",
+        "command": "start http://localhost:8080/admin",
+        "windows": {
+          "command": "start http://localhost:8080/admin"
+        },
+        "problemMatcher": []
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.pylint",
+      "ms-python.debugpy",
+      "PKief.material-icon-theme",
+      "eamodio.gitlens"
+    ]
+  }
+}
